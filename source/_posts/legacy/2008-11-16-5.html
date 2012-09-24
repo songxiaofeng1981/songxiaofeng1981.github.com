@@ -1,0 +1,18 @@
+---
+layout: post
+title: "session"
+comments: true
+categories: [legacy]
+---
+
+<div>默认情况下，session依赖cookie，<br>
+如果cookie被禁止，可以用url重写，往下传sessionid，<br>
+因为sessionid是客户端和服务器维持连接的唯一状态码<br>
+<br>
+session 是服务器端的一段内存，和浏览器的窗口有关；<br>
+在tomcat的web.xml文件下可以配置session的时间，默认30min过期。客户端和服务器有对应的sessionid，默认状况下通过cookie实现，禁用时通过url重写实现session。<br>
+<br>
+<br>
+servlet生命周期，先调用service方法，service方法在调用受保护的service方法，客户端请求以多线程方式在运行。多个线程操作的唯一的一个对象。不要再servlet中设计成员变量。<br>
+<br>
+任何类型只要实现了Serializable接口，就可以被保存到文件中，或者作为数据流通过网络发送到别的地方。也可以用管道来传输到系统的其他程序中。这样子极大的简化了类的设计。</div>

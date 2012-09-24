@@ -1,0 +1,42 @@
+---
+layout: post
+title: "删除工程中所有的.svn配置文件夹中的文件"
+comments: true
+categories: [legacy]
+---
+
+<div><h3> </h3>
+<strong>关键字: svn</strong>
+<div class="blog_content">
+<p> </p>
+<p><span style="color: #0000ff">if(WScript.Arguments.length==0)<br>
+WScript.quit();<br>
+<br>
+var fso = new ActiveXObject(&quot;Scripting.FileSystemObject&quot;);<br>
+var fc,folder,folderList=[];<br>
+var rootFolder = fso.getFolder(WScript.Arguments(0));<br>
+<br>
+folderList.push(rootFolder);<br>
+while(folderList.length&gt;0){<br>
+folder = folderList.pop();<br>
+fc = new Enumerator(folder.SubFolders);<br>
+while(!fc.atEnd())<br>
+{<br>
+if(fc.item().name =='.svn')<br>
+fso.deleteFolder(fc.item().path,true);<br>
+else<br>
+folderList.push(fc.item());<br>
+<br>
+fc.moveNext();<br>
+}<br>
+}<br>
+<br>
+----------------------------------------------------------------------</span></p>
+<p>将虚线以上的程序保存为js文件，比如：delete_svn.js</p>
+<p>运行：cscript.exe delete_svn.js XXX</p>
+<p>即表示在当前目录中有一个delete_svn.js文件，XXX指向的是需要处理的工程目录</p>
+<p>eg:(e:中有delete_svn.js)</p>
+<p>cscript.exe delete_svn.js K:\myproject</p>
+<p>处理的是K盘下的myproject目录,将其目录中以及所有子目录中的.svn文件夹删除。</p>
+<p>(该程序来源于某论坛)</p>
+</div></div>

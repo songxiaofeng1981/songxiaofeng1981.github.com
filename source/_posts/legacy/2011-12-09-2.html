@@ -1,0 +1,8 @@
+---
+layout: post
+title: "centos flume"
+comments: true
+categories: [legacy]
+---
+
+<div><p>flume 安装好后，flume master 启动不了 。报错： <b>ZooKeeper </b><b>server </b><b>did </b><b>not </b><b>come </b><b>up</b> within 15 seconds</p><p>解决方法：</p><p>配置文件中增加：flume-conf.xml </p><p>&nbsp; &nbsp; &lt;property&gt;<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;name&gt;flume.master.zk.use.external&lt;/name&gt;<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;value&gt;true&lt;/value&gt;<br /> &nbsp; &nbsp; &nbsp; &nbsp; &lt;/property&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; &lt;property&gt;<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;name&gt;flume.master.zk.servers&lt;/name&gt;<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;value&gt;localhost:2181&lt;/value&gt;<br /> &nbsp; &nbsp; &nbsp; &nbsp; &lt;/property&gt; </p><p>正常</p></div>
