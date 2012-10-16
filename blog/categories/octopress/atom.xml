@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | 西去无狗的网络日志]]></title>
+  <link href="http://songxiaofeng1981.github.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://songxiaofeng1981.github.com/"/>
+  <updated>2012-10-16T16:51:29+08:00</updated>
+  <id>http://songxiaofeng1981.github.com/</id>
+  <author>
+    <name><![CDATA[xiaofeng.song]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[octopress 乱码解决方法]]></title>
+    <link href="http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/"/>
+    <updated>2012-10-16T16:13:00+08:00</updated>
+    <id>http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe</id>
+    <content type="html"><![CDATA[<ul>
+<li>octopress 存在乱码，编译不过去的现象。有时候主页没有乱码，链接点进去有乱码。这个问题困扰很久。现在总算解决了。
+当然，categories 还没有加上。这个增加就会出现乱码，只能TODO</li>
+</ul>
+
+
+<!--more-->
+
+
+<ol>
+<li>自动生成的文件名称用中文，改写title时 用双引号扩住。</li>
+<li>默认主页显示所有内容。编辑时在页面中增加 <code>&lt;!--more--&gt;</code> 这行上下要空开，会只显示 more前面的部分。后面的省略。</li>
+<li><p>在环境变量中增加字符集。如下。安装了git.bash后可以用下面的命令。</p>
+
+<pre><code> $ vim ~/.bash_profile
+ export   LC_ALL=zh_CN.UTF-8
+ export   LANG=zh_CN.UTF-8
+</code></pre></li>
+<li>书写markdwon文件时保存为utf-8 。</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
