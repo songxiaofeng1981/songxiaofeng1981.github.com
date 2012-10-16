@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-10-16T15:42:37+08:00</updated>
+  <updated>2012-10-16T15:48:35+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[xiaofeng.song]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -201,8 +201,15 @@
     <content type="html"><![CDATA[<ul>
 <li><p>我用的django的版本是1.3，听闻django可以配置日志模块，不用自己单独写，于是一阵狂搜加看官方文档解决了我的需求。</p></li>
 <li><p>我的需求是需要配置多个日志文件，网上搜出来大部分是一个的，所以给大家一个我的例子做参考。</p></li>
-<li><p>在setting.py里面配置如下：</p></li>
 </ul>
+
+
+<!--more-->
+
+
+<ol>
+<li>在setting.py里面配置如下：</li>
+</ol>
 
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
