@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://songxiaofeng1981.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: tokyo | My Octopress Blog]]></title>
+  <link href="http://songxiaofeng1981.github.com/blog/categories/tokyo/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
   <updated>2012-10-16T15:06:48+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
@@ -189,7 +189,7 @@
 
 <p><img src="http://ww3.sinaimg.cn/large/417fff62jw1du0cu150t3j.jpg"></p>
 
-<p>Included file &#8216;links&#8217; not found in _includes directory</p>
+<p>Included file 'links' not found in _includes directory</p>
 ]]></content>
   </entry>
   
