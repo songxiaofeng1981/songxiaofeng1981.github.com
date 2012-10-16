@@ -1,0 +1,43 @@
+<p>﻿#  Snippets 自动提示功能
+* sublime 的 Snippets 可以自定义代码补全功能。</p>
+
+<!--more-->
+
+
+<pre><code>1. 我建了一个python的main方法自动提示,步骤如下：
+
+    1.  (Tools &gt; new Snippet) 
+
+            &lt;!-- See http://www.sublimetext.com/docs/snippets for more information --&gt;
+            &lt;snippet&gt;
+                &lt;tabTrigger&gt;main_song&lt;/tabTrigger&gt;
+                &lt;scope&gt;source.python&lt;/scope&gt;
+                &lt;description&gt;main&lt;/description&gt;
+                &lt;content&gt;&lt;![CDATA[
+            if __name__ == '__main__' :
+                ${0:pass}
+            ]]&gt;&lt;/content&gt;
+            &lt;/snippet&gt;
+
+    2.  保存为文件名 main.sublime-snippet。默认保存到package文件下。这样升级的时候不会覆盖掉。
+</code></pre>
+
+<hr />
+
+<p>参考以下链接：</p>
+
+<blockquote><p> <a href="http://7626.net/?p=164" title="引用">Sublime Text 2 使用配置心得 – notepad++ 略丑</a></p>
+
+<p> <a href="http://qilei.org/201204/sublime-text2-setting/" title="引用">Sublime Text 2配置和使用</a></p></blockquote>
+
+<p>为win7创建软连接：
+命令格式为： mklink source origin ,即在桌面创建一个指向 <code>c:\Users\song\octopress\
+source\_posts</code> 的超链接。</p>
+
+<pre><code>C:\Users\song&gt;mklink /d   C:\Users\song\Desktop\_postse c:\Users\song\octopress\
+source\_posts
+</code></pre>
+
+<p><a href="http://sinosmond.github.com/blog/2012/06/24/centos6-dot-2-plus-jdk6-plus-tomcat7-plus-nginx1-dot-2-plus-mysql5-dot-x/">http://sinosmond.github.com/blog/2012/06/24/centos6-dot-2-plus-jdk6-plus-tomcat7-plus-nginx1-dot-2-plus-mysql5-dot-x/</a></p>
+
+<hr />

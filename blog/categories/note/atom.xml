@@ -4,7 +4,7 @@
   <title><![CDATA[Category: note | 西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/blog/categories/note/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-10-16T15:48:35+08:00</updated>
+  <updated>2012-10-16T16:04:05+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -12,6 +12,122 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[python 快速分组方法]]></title>
+    <link href="http://songxiaofeng1981.github.com/blog/2012/09/27/python/"/>
+    <updated>2012-09-27T18:01:00+08:00</updated>
+    <id>http://songxiaofeng1981.github.com/blog/2012/09/27/python</id>
+    <content type="html"><![CDATA[<h1>利用python对一组数据进行分组，类似sql语句的groupby</h1>
+
+<p>代码示例如下：</p>
+
+<!--more-->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">urllib2</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">json</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span><span class="n">productCode</span><span class="p">):</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">=</span> <span class="n">code</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">productCode</span><span class="o">=</span><span class="n">productCode</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">get_channels</span><span class="p">(</span><span class="n">api</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">try</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">datas</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">recorder</span> <span class="ow">in</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">opener</span><span class="o">.</span><span class="n">read</span><span class="p">()):</span>
+</span><span class='line'>        <span class="n">customer</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s">&quot;code&quot;</span><span class="p">:</span><span class="n">recorder</span><span class="p">[</span><span class="s">&#39;code&#39;</span><span class="p">],</span>
+</span><span class='line'>            <span class="s">&quot;productCode&quot;</span><span class="p">:</span><span class="n">recorder</span><span class="p">[</span><span class="s">&#39;productCode&#39;</span><span class="p">],</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="n">datas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">customer</span><span class="p">)</span>
+</span><span class='line'>    <span class="c"># print len(datas)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">datas</span>
+</span><span class='line'><span class="k">except</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">print</span> <span class="n">e</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="s">&quot;&lt;strong&gt;main&lt;/strong&gt;&quot;</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">channels</span> <span class="o">=</span> <span class="n">get_channels</span><span class="p">(</span><span class="s">&#39;http://xxx.x.x.x/customer/wasu/channels&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="n">users</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'><span class="c"># print len(channels)</span>
+</span><span class='line'><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">channels</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="s">&#39;code&#39;</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="s">&#39;productCode&#39;</span><span class="p">])</span>
+</span><span class='line'>    <span class="c"># print u</span>
+</span><span class='line'>    <span class="n">users</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+</span><span class='line'>    <span class="c"># print len(users)</span>
+</span><span class='line'><span class="n">persons_by_age</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+</span><span class='line'><span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">persons_by_age</span><span class="p">[</span><span class="n">person</span><span class="o">.</span><span class="n">productCode</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">persons_by_age</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">(</span><span class="n">persons_by_age</span><span class="p">[</span><span class="n">x</span><span class="p">]):</span>
+</span><span class='line'>        <span class="k">print</span> <span class="n">y</span><span class="o">.</span><span class="n">code</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[django项目添加日志（转载）]]></title>
