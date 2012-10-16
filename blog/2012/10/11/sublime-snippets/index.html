@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>西去无狗的网络日志</title>
+  <title>Snippets 自动提示功能 - 西去无狗的网络日志</title>
   <meta name="author" content="xiaofeng.song">
 
   
-  <meta name="description" content="Snippets 自动提示功能 sublime 的 Snippets 可以自定义代码补全功能。 ">
+  <meta name="description" content="Snippets 自动提示功能 sublime 的 Snippets 可以自定义代码补全功能。 1. 我建了一个python的main方法自动提示,步骤如下： 1. (Tools &gt; new Snippet) &lt;!-- See http://www.sublimetext.com/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://songxiaofeng1981.github.com/">
+  <link rel="canonical" href="http://songxiaofeng1981.github.com/blog/2012/10/11/sublime-snippets/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -60,15 +60,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/10/11/sublime-snippets/">Snippets 自动提示功能</a></h1>
+      <h1 class="entry-title">Snippets 自动提示功能</h1>
     
     
       <p class="meta">
@@ -91,77 +88,64 @@
   </header>
 
 
-  <div class="entry-content"><h1>Snippets 自动提示功能</h1>
+<div class="entry-content"><h1>Snippets 自动提示功能</h1>
 
 <ul>
 <li>sublime 的 Snippets 可以自定义代码补全功能。</li>
 </ul>
 
 
+<!--more-->
+
+
+<pre><code>1. 我建了一个python的main方法自动提示,步骤如下：
+
+    1.  (Tools &gt; new Snippet) 
+
+            &lt;!-- See http://www.sublimetext.com/docs/snippets for more information --&gt;
+            &lt;snippet&gt;
+                &lt;tabTrigger&gt;main_song&lt;/tabTrigger&gt;
+                &lt;scope&gt;source.python&lt;/scope&gt;
+                &lt;description&gt;main&lt;/description&gt;
+                &lt;content&gt;&lt;![CDATA[
+            if __name__ == '__main__' :
+                ${0:pass}
+            ]]&gt;&lt;/content&gt;
+            &lt;/snippet&gt;
+
+    2.  保存为文件名 main.sublime-snippet。默认保存到package文件下。这样升级的时候不会覆盖掉。
+</code></pre>
+
+<hr />
+
+<p>参考以下链接：</p>
+
+<blockquote><p> <a href="http://7626.net/?p=164" title="引用">Sublime Text 2 使用配置心得 – notepad++ 略丑</a></p>
+
+<p> <a href="http://qilei.org/201204/sublime-text2-setting/" title="引用">Sublime Text 2配置和使用</a></p></blockquote>
+
+<p>为win7创建软连接：
+命令格式为： mklink source origin ,即在桌面创建一个指向 <code>c:\Users\song\octopress\
+source\_posts</code> 的超链接。</p>
+
+<pre><code>C:\Users\song&gt;mklink /d   C:\Users\song\Desktop\_postse c:\Users\song\octopress\
+source\_posts
+</code></pre>
+
+<p><a href="http://sinosmond.github.com/blog/2012/06/24/centos6-dot-2-plus-jdk6-plus-tomcat7-plus-nginx1-dot-2-plus-mysql5-dot-x/">http://sinosmond.github.com/blog/2012/06/24/centos6-dot-2-plus-jdk6-plus-tomcat7-plus-nginx1-dot-2-plus-mysql5-dot-x/</a></p>
+
+<hr />
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/10/11/sublime-snippets/">Read on &rarr;</a>
-    </footer>
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/27/python/">Python 快速分组方法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">xiaofeng.song</span></span>
 
-<time datetime="2012-09-27T18:01:00+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h1>利用python对一组数据进行分组，类似sql语句的groupby</h1>
-
-<p>代码示例如下：</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/09/27/python/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/17/tokyo-toys-show/">东京玩具展2012</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -173,79 +157,38 @@
   
 
 
-<time datetime="2012-06-17T14:38:00+08:00" pubdate data-updated="true">Jun 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>东京玩具展（東京おもちゃショー）是一年一度的日本玩具界活动，本年度的玩具展是2012-06-14到2012-06-17，前两天是商家活动，后两天是对民众开放。</p>
-
-<p>昨天，我跟妻子一起去看了一下，总的感觉是眼睛不够、时间不够、体力不够、钱不够……</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/06/17/tokyo-toys-show/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2012-10-11T11:52:00+08:00" pubdate data-updated="true">Oct 11<span>th</span>, 2012</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/17/django-note/">Django项目添加日志（转载）</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
+    <a class='category' href='/blog/categories/note/'>note</a>
+  
+</span>
 
 
-<time datetime="2012-06-17T14:38:00+08:00" pubdate data-updated="true">Jun 17<span>th</span>, 2012</time>
-        
-      </p>
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://songxiaofeng1981.github.com/blog/2012/10/11/sublime-snippets/" data-via="" data-counturl="http://songxiaofeng1981.github.com/blog/2012/10/11/sublime-snippets/" >Tweet</a>
+  
+  
+  
+</div>
 
-
-  <div class="entry-content"><ul>
-<li><p>我用的django的版本是1.3，听闻django可以配置日志模块，不用自己单独写，于是一阵狂搜加看官方文档解决了我的需求。</p></li>
-<li><p>我的需求是需要配置多个日志文件，网上搜出来大部分是一个的，所以给大家一个我的例子做参考。</p></li>
-</ul>
-
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/09/27/python/" title="Previous Post: python 快速分组方法">&laquo; python 快速分组方法</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/06/17/django-note/">Read on &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -278,6 +221,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
