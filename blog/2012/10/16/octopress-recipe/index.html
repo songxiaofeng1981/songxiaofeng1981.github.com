@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: transformers - 西去无狗的网络日志</title>
+  <title>octopress 乱码解决方法 - 西去无狗的网络日志</title>
   <meta name="author" content="xiaofeng.song">
 
   
-  <meta name="description" content="Category: transformers">
+  <meta name="description" content="octopress 存在乱码，编译不过去的现象。有时候主页没有乱码，链接点进去有乱码。这个问题困扰很久。现在总算解决了。
+当然，categories 还没有加上。这个增加就会出现乱码，只能TODO 自动生成的文件名称用中文，改写title时 用双引号扩住。
+默认主页显示所有内容。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://songxiaofeng1981.github.comblog/categories/transformers/">
+  <link rel="canonical" href="http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -61,35 +63,104 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Transformers</h1>
+    
+      <h1 class="entry-title">Octopress 乱码解决方法</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-16T16:13:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/06/17/tokyo-toys-show/">东京玩具展2012</a></h1>
-<time datetime="2012-06-17T14:38:00+08:00" pubdate><span class='month'>Jun</span> <span class='day'>17</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/events/'>events</a>, <a class='category' href='/blog/categories/tokyo/'>tokyo</a>, <a class='category' href='/blog/categories/toys/'>toys</a>, <a class='category' href='/blog/categories/transformers/'>transformers</a></span>
-</footer>
+<div class="entry-content"><ul>
+<li>octopress 存在乱码，编译不过去的现象。有时候主页没有乱码，链接点进去有乱码。这个问题困扰很久。现在总算解决了。
+当然，categories 还没有加上。这个增加就会出现乱码，只能TODO</li>
+</ul>
 
 
-</article>
+<!--more-->
+
+
+<ol>
+<li>自动生成的文件名称用中文，改写title时 用双引号扩住。</li>
+<li>默认主页显示所有内容。编辑时在页面中增加 <code>&lt;!--more--&gt;</code> 这行上下要空开，会只显示 more前面的部分。后面的省略。</li>
+<li><p>在环境变量中增加字符集。如下。安装了git.bash后可以用下面的命令。</p>
+
+<pre><code> $ vim ~/.bash_profile
+ export   LC_ALL=zh_CN.UTF-8
+ export   LANG=zh_CN.UTF-8
+</code></pre></li>
+<li>书写markdwon文件时保存为utf-8 。</li>
+</ol>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">xiaofeng.song</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-16T16:13:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/note/'>note</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/" data-via="" data-counturl="http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/11/sublime-snippets/" title="Previous Post: Snippets 自动提示功能">&laquo; Snippets 自动提示功能</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
