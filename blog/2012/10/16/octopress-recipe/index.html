@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>octopress 乱码解决方法 - 西去无狗的网络日志</title>
+  <title>octopress 乱码解决方法,以及云同步方法 - 西去无狗的网络日志</title>
   <meta name="author" content="xiaofeng.song">
 
   
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">Octopress 乱码解决方法</h1>
+      <h1 class="entry-title">Octopress 乱码解决方法,以及云同步方法</h1>
     
     
       <p class="meta">
@@ -108,9 +108,23 @@
  export   LC_ALL=zh_CN.UTF-8
  export   LANG=zh_CN.UTF-8
 </code></pre></li>
-<li>书写markdwon文件时保存为utf-8 。</li>
+<li><p>书写markdwon文件时保存为utf-8 。</p></li>
+<li><p>为octopress 设置百度云同步。前段时间baidu活动，网盘100g。实在太给力了。
+ 现在把md文件和百度网盘同步：</p></li>
 </ol>
 
+
+<blockquote><ul>
+<li>  为win7创建软连接：
+
+<pre><code>命令格式为： mklink source origin ,即在桌面创建一个指向 `c:\Users\song\octopress\
+source\_posts` 的超链接。
+
+  C:\Users\song&gt;mklink /d   C:\Users\song\Desktop\_postse c:\Users\song\octopress\
+    source\_posts
+</code></pre></li>
+</ul>
+</blockquote>
 </div>
 
 
@@ -184,7 +198,7 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2012/10/16/octopress-recipe/">octopress 乱码解决方法</a>
+        <a href="/blog/2012/10/16/octopress-recipe/">octopress 乱码解决方法,以及云同步方法</a>
       </li>
     
       <li class="post">

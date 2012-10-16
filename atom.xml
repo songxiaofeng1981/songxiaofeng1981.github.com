@@ -4,7 +4,7 @@
   <title><![CDATA[西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-10-16T17:29:17+08:00</updated>
+  <updated>2012-10-16T17:41:44+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -26,7 +26,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[octopress 乱码解决方法]]></title>
+    <title type="html"><![CDATA[octopress 乱码解决方法,以及云同步方法]]></title>
     <link href="http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/"/>
     <updated>2012-10-16T16:13:00+08:00</updated>
     <id>http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe</id>
@@ -48,9 +48,23 @@
  export   LC_ALL=zh_CN.UTF-8
  export   LANG=zh_CN.UTF-8
 </code></pre></li>
-<li>书写markdwon文件时保存为utf-8 。</li>
+<li><p>书写markdwon文件时保存为utf-8 。</p></li>
+<li><p>为octopress 设置百度云同步。前段时间baidu活动，网盘100g。实在太给力了。
+ 现在把md文件和百度网盘同步：</p></li>
 </ol>
 
+
+<blockquote><ul>
+<li>  为win7创建软连接：
+
+<pre><code>命令格式为： mklink source origin ,即在桌面创建一个指向 `c:\Users\song\octopress\
+source\_posts` 的超链接。
+
+  C:\Users\song&gt;mklink /d   C:\Users\song\Desktop\_postse c:\Users\song\octopress\
+    source\_posts
+</code></pre></li>
+</ul>
+</blockquote>
 ]]></content>
   </entry>
   
