@@ -161,159 +161,6 @@ octopress 存在乱码，编译不过去的现象。有时候主页没有乱码�
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/10/10/django/">Django项目添加日志</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-10T11:52:00+08:00" pubdate data-updated="true">Oct 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><p>我用的django的版本是1.3，听闻django可以配置日志模块，不用自己单独写，于是一阵狂搜加看官方文档解决了我的需求。</p></li>
-<li><p>我的需求是需要配置多个日志文件，网上搜出来大部分是一个的，所以给大家一个我的例子做参考。</p></li>
-<li><p>在setting.py里面配置如下：</p></li>
-</ul>
-
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s">&#39;version&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-</span><span class='line'>    <span class="s">&#39;disable_existing_loggers&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-</span><span class='line'>    <span class="s">&#39;formatters&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="s">&#39;standard&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>                <span class="s">&#39;format&#39;</span><span class="p">:</span> <span class="s">&#39;</span><span class="si">%(levelname)s</span><span class="s"> </span><span class="si">%(asctime)s</span><span class="s"> </span><span class="si">%(message)s</span><span class="s">&#39;</span>
-</span><span class='line'>                <span class="p">},</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="s">&#39;filters&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="s">&#39;mail_admins&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;ERROR&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;django.utils.log.AdminEmailHandler&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="s">&#39;formatter&#39;</span><span class="p">:</span><span class="s">&#39;standard&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>        <span class="s">&#39;test1_handler&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span><span class="s">&#39;DEBUG&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="s">&#39;class&#39;</span><span class="p">:</span><span class="s">&#39;logging.handlers.RotatingFileHandler&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="s">&#39;filename&#39;</span><span class="p">:</span><span class="s">&#39;path1&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="s">&#39;formatter&#39;</span><span class="p">:</span><span class="s">&#39;standard&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>        <span class="s">&#39;test2_handler&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span><span class="s">&#39;DEBUG&#39;</span><span class="p">,</span>
-</span><span class='line'>                   <span class="s">&#39;class&#39;</span><span class="p">:</span><span class="s">&#39;logging.handlers.RotatingFileHandler&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="s">&#39;filename&#39;</span><span class="p">:</span><span class="s">&#39;path2&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="s">&#39;formatter&#39;</span><span class="p">:</span><span class="s">&#39;standard&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="s">&#39;loggers&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="s">&#39;django.request&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>            <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;mail_admins&#39;</span><span class="p">],</span>
-</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;ERROR&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="s">&#39;propagate&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>        <span class="s">&#39;test1&#39;</span><span class="p">:{</span>
-</span><span class='line'>            <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;test1_handler&#39;</span><span class="p">],</span>
-</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;INFO&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="s">&#39;propagate&#39;</span><span class="p">:</span> <span class="bp">False</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>         <span class="s">&#39;test2&#39;</span><span class="p">:{</span>
-</span><span class='line'>            <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;test2_handler&#39;</span><span class="p">],</span>
-</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;INFO&#39;</span><span class="p">,</span>
-</span><span class='line'>                          <span class="s">&#39;propagate&#39;</span><span class="p">:</span> <span class="bp">False</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li><p>里面的level什么的可以自己调整，需要几个文件就配几个handler和logger，还是很方面的。用的时候怎么用呢，看下面吧。</p></li>
-<li><p>在要用log的view.py里面，如果想用test1这个日志，则</p>
-
-<pre><code>     &gt;  log=logging.getLogger('test1')
-
-     &gt;  log.error（“日志内容”） 
-</code></pre></li>
-<li><p>如果，想要在日志内容里面传递变量，怎么办</p>
-
-<pre><code>       &gt; log.error(" %s : execute %s failed",变量1,变量2)，比较像c的printf，还是很方便的。
-</code></pre></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
       <h1 class="entry-title"><a href="/blog/2012/09/27/python/">Python 快速分组方法</a></h1>
     
     
@@ -461,15 +308,15 @@ octopress 存在乱码，编译不过去的现象。有时候主页没有乱码�
       </li>
     
       <li class="post">
-        <a href="/blog/2012/10/10/django/">django项目添加日志</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2012/09/27/python/">python 快速分组方法</a>
       </li>
     
       <li class="post">
         <a href="/blog/2012/06/17/tokyo-toys-show/">东京玩具展2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/17/django-note/">django项目添加日志（转载）</a>
       </li>
     
   </ul>
