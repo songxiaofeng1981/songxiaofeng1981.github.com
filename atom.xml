@@ -4,7 +4,7 @@
   <title><![CDATA[西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-10-17T11:14:59+08:00</updated>
+  <updated>2012-10-17T11:23:24+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -27,16 +27,13 @@
 <!--more-->
 
 
-<ul>
-<li><a href="http://blog.pixelingene.com/2011/09/tips-for-speeding-up-octopress-site-generation/" title="tip">加入主题</a>
+<h2><a href="http://blog.pixelingene.com/2011/09/tips-for-speeding-up-octopress-site-generation/" title="tip">tip octopress加速</a></h2>
 
 <blockquote><ul>
 <li>rake isolate[filename]: Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker</li>
 <li>rake integrate: Move all stashed posts back into the posts directory, ready for site generation</li>
 </ul>
-</blockquote></li>
-</ul>
-
+</blockquote>
 ]]></content>
   </entry>
   
