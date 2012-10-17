@@ -4,7 +4,7 @@
   <title><![CDATA[Category: note | 西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/blog/categories/note/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-10-17T11:23:28+08:00</updated>
+  <updated>2012-10-17T14:26:07+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -18,22 +18,32 @@
     <link href="http://songxiaofeng1981.github.com/blog/2012/10/17/octopress-tip/"/>
     <updated>2012-10-17T11:06:00+08:00</updated>
     <id>http://songxiaofeng1981.github.com/blog/2012/10/17/octopress-tip</id>
-    <content type="html"><![CDATA[<ul>
+    <content type="html"><![CDATA[<ol>
 <li><a href="http://melandri.net/2012/02/14/octopress-theme-customization/" title="引用">修改主题参考</a></li>
-<li><a href="http://zacharymaril.com/blog/2012/02/24/please-please-octopress/" title="引用">修改主题参考</a></li>
-</ul>
+</ol>
 
 
 <!--more-->
 
 
-<h2><a href="http://blog.pixelingene.com/2011/09/tips-for-speeding-up-octopress-site-generation/" title="tip">tip octopress加速</a></h2>
+<ol>
+<li><a href="http://zacharymaril.com/blog/2012/02/24/please-please-octopress/" title="引用">修改主题参考</a>
+
+<h2><a href="http://blog.pixelingene.com/2011/09/tips-for-speeding-up-octopress-site-generation/" title="tip">tip octopress加速</a></h2></li>
+</ol>
+
 
 <blockquote><ul>
 <li>rake isolate[filename]: Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker</li>
 <li>rake integrate: Move all stashed posts back into the posts directory, ready for site generation</li>
 </ul>
 </blockquote>
+
+<ul>
+<li>一个非常好的octopress参考网站：以后重点参考：
+  <a href="http://syeong.jcsg.com/2012/07/06/liquid-examples-octopress-categories/">参考网站</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
@@ -145,56 +155,107 @@ source\_posts
 <!--more-->
 
 
-<p>{% codeblock  lang:python %}</p>
-
-<p>import urllib2
-import json
-from collections import defaultdict</p>
-
-<p>class User(object):</p>
-
-<pre><code>def __init__(self, code,productCode):
-    self.code = code
-    self.productCode=productCode
-</code></pre>
-
-<p>def get_channels(api):</p>
-
-<pre><code>try:
-    opener = urllib2.urlopen(api, timeout=30)
-    datas = []
-    for recorder in json.loads(opener.read()): 
-        customer = {
-            "code":recorder['code'],
-            "productCode":recorder['productCode'],
-        }
-        datas.append(customer)
-    # print len(datas)
-    return datas
-except Exception, e:
-    print e
-</code></pre>
-
-<p>if <strong>name</strong> == "<strong>main</strong>":</p>
-
-<pre><code>channels = get_channels('http://xxx.x.x.x/customer/wasu/channels')
-users = []
-# print len(channels)
-for f in channels:
-    u = User(f['code'],f['productCode'])
-    # print u
-    users.append(u)
-    # print len(users)
-persons_by_age = defaultdict(list)
-for person in users:
-    persons_by_age[person.productCode].append(person)
-
-for x in persons_by_age:
-    for y in (persons_by_age[x]):
-        print y.code
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">urllib2</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">json</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span><span class="n">productCode</span><span class="p">):</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">=</span> <span class="n">code</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">productCode</span><span class="o">=</span><span class="n">productCode</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">get_channels</span><span class="p">(</span><span class="n">api</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">try</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">api</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">datas</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">recorder</span> <span class="ow">in</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">opener</span><span class="o">.</span><span class="n">read</span><span class="p">()):</span>
+</span><span class='line'>        <span class="n">customer</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s">&quot;code&quot;</span><span class="p">:</span><span class="n">recorder</span><span class="p">[</span><span class="s">&#39;code&#39;</span><span class="p">],</span>
+</span><span class='line'>            <span class="s">&quot;productCode&quot;</span><span class="p">:</span><span class="n">recorder</span><span class="p">[</span><span class="s">&#39;productCode&#39;</span><span class="p">],</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="n">datas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">customer</span><span class="p">)</span>
+</span><span class='line'>    <span class="c"># print len(datas)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">datas</span>
+</span><span class='line'><span class="k">except</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">print</span> <span class="n">e</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="s">&quot;&lt;strong&gt;main&lt;/strong&gt;&quot;</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">channels</span> <span class="o">=</span> <span class="n">get_channels</span><span class="p">(</span><span class="s">&#39;http://xxx.x.x.x/customer/wasu/channels&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="n">users</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'><span class="c"># print len(channels)</span>
+</span><span class='line'><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">channels</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="s">&#39;code&#39;</span><span class="p">],</span><span class="n">f</span><span class="p">[</span><span class="s">&#39;productCode&#39;</span><span class="p">])</span>
+</span><span class='line'>    <span class="c"># print u</span>
+</span><span class='line'>    <span class="n">users</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+</span><span class='line'>    <span class="c"># print len(users)</span>
+</span><span class='line'><span class="n">persons_by_age</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+</span><span class='line'><span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">persons_by_age</span><span class="p">[</span><span class="n">person</span><span class="o">.</span><span class="n">productCode</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">persons_by_age</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">(</span><span class="n">persons_by_age</span><span class="p">[</span><span class="n">x</span><span class="p">]):</span>
+</span><span class='line'>        <span class="k">print</span> <span class="n">y</span><span class="o">.</span><span class="n">code</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -217,58 +278,111 @@ for x in persons_by_age:
 </ol>
 
 
-<p>{% codeblock  lang:python %}</p>
-
-<pre><code>LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': True,
-    'formatters': {
-        'standard': {
-                'format': '%(levelname)s %(asctime)s %(message)s'
-                },
-    },
-    'filters': {
-    },
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler',
-            'formatter':'standard',
-        },
-        'test1_handler': {
-            'level':'DEBUG',
-            'class':'logging.handlers.RotatingFileHandler',
-            'filename':'path1',
-            'formatter':'standard',
-        },
-        'test2_handler': {
-            'level':'DEBUG',
-                   'class':'logging.handlers.RotatingFileHandler',
-            'filename':'path2',
-            'formatter':'standard',
-        },
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-        'test1':{
-            'handlers': ['test1_handler'],
-            'level': 'INFO',
-            'propagate': False
-        },
-         'test2':{
-            'handlers': ['test2_handler'],
-            'level': 'INFO',
-                          'propagate': False
-        },
-    }
-}
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">LOGGING</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s">&#39;version&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>    <span class="s">&#39;disable_existing_loggers&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+</span><span class='line'>    <span class="s">&#39;formatters&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&#39;standard&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>                <span class="s">&#39;format&#39;</span><span class="p">:</span> <span class="s">&#39;</span><span class="si">%(levelname)s</span><span class="s"> </span><span class="si">%(asctime)s</span><span class="s"> </span><span class="si">%(message)s</span><span class="s">&#39;</span>
+</span><span class='line'>                <span class="p">},</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s">&#39;filters&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&#39;mail_admins&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;ERROR&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;django.utils.log.AdminEmailHandler&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;formatter&#39;</span><span class="p">:</span><span class="s">&#39;standard&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="s">&#39;test1_handler&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span><span class="s">&#39;DEBUG&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;class&#39;</span><span class="p">:</span><span class="s">&#39;logging.handlers.RotatingFileHandler&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;filename&#39;</span><span class="p">:</span><span class="s">&#39;path1&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;formatter&#39;</span><span class="p">:</span><span class="s">&#39;standard&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="s">&#39;test2_handler&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span><span class="s">&#39;DEBUG&#39;</span><span class="p">,</span>
+</span><span class='line'>                   <span class="s">&#39;class&#39;</span><span class="p">:</span><span class="s">&#39;logging.handlers.RotatingFileHandler&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;filename&#39;</span><span class="p">:</span><span class="s">&#39;path2&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;formatter&#39;</span><span class="p">:</span><span class="s">&#39;standard&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s">&#39;loggers&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&#39;django.request&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;mail_admins&#39;</span><span class="p">],</span>
+</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;ERROR&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;propagate&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="s">&#39;test1&#39;</span><span class="p">:{</span>
+</span><span class='line'>            <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;test1_handler&#39;</span><span class="p">],</span>
+</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;INFO&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s">&#39;propagate&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>         <span class="s">&#39;test2&#39;</span><span class="p">:{</span>
+</span><span class='line'>            <span class="s">&#39;handlers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;test2_handler&#39;</span><span class="p">],</span>
+</span><span class='line'>            <span class="s">&#39;level&#39;</span><span class="p">:</span> <span class="s">&#39;INFO&#39;</span><span class="p">,</span>
+</span><span class='line'>                          <span class="s">&#39;propagate&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <ol>
 <li><p>里面的level什么的可以自己调整，需要几个文件就配几个handler和logger，还是很方面的。用的时候怎么用呢，看下面吧。</p></li>
