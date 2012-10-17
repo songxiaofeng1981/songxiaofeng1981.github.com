@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | 西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-10-17T14:57:38+08:00</updated>
+  <updated>2012-10-17T17:35:31+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -86,6 +86,11 @@ source\_posts` 的超链接。
 </code></pre></li>
 </ul>
 </blockquote>
+
+<ol>
+<li>Disqus 语言设置后还是英文，general 选项中    <code>Enable Disqus 2012 features for your site.</code> 勾去掉。</li>
+</ol>
+
 ]]></content>
   </entry>
   
