@@ -4,7 +4,7 @@
   <title><![CDATA[西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-10-17T10:55:37+08:00</updated>
+  <updated>2012-10-17T11:14:59+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[octopress rake 加速，主题更改方法]]></title>
+    <link href="http://songxiaofeng1981.github.com/blog/2012/10/17/octopress-tip/"/>
+    <updated>2012-10-17T11:06:00+08:00</updated>
+    <id>http://songxiaofeng1981.github.com/blog/2012/10/17/octopress-tip</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://melandri.net/2012/02/14/octopress-theme-customization/" title="引用">修改主题参考</a></li>
+<li><a href="http://zacharymaril.com/blog/2012/02/24/please-please-octopress/" title="引用">修改主题参考</a></li>
+</ul>
+
+
+<!--more-->
+
+
+<ul>
+<li><a href="http://blog.pixelingene.com/2011/09/tips-for-speeding-up-octopress-site-generation/" title="tip">加入主题</a>
+
+<blockquote><ul>
+<li>rake isolate[filename]: Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker</li>
+<li>rake integrate: Move all stashed posts back into the posts directory, ready for site generation</li>
+</ul>
+</blockquote></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[租房记（下）]]></title>

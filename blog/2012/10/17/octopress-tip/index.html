@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>octopress 乱码解决方法,以及云同步方法 - 西去无狗的网络日志</title>
+  <title>octopress rake 加速，主题更改方法 - 西去无狗的网络日志</title>
   <meta name="author" content="xiaofeng.song">
 
   
-  <meta name="description" content="octopress 存在乱码，编译不过去的现象。有时候主页没有乱码，链接点进去有乱码。这个问题困扰很久。现在总算解决了。
-当然，categories 还没有加上。这个增加就会出现乱码，只能TODO 自动生成的文件名称用中文，改写title时 用双引号扩住。
-默认主页显示所有内容。 &hellip;">
+  <meta name="description" content="修改主题参考
+修改主题参考 加入主题 rake isolate[filename]: Move all other posts than the one currently being worked on to a temporary stash location (stash) so &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/">
+  <link rel="canonical" href="http://songxiaofeng1981.github.com/blog/2012/10/17/octopress-tip/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +66,7 @@
   
   <header>
     
-      <h1 class="entry-title">Octopress 乱码解决方法,以及云同步方法</h1>
+      <h1 class="entry-title">Octopress Rake 加速，主题更改方法</h1>
     
     
       <p class="meta">
@@ -83,7 +82,7 @@
   
 
 
-<time datetime="2012-10-16T16:13:00+08:00" pubdate data-updated="true"> 2012年 10月 16日</time>
+<time datetime="2012-10-17T11:06:00+08:00" pubdate data-updated="true"> 2012年 10月 17日</time>
         
       </p>
     
@@ -91,40 +90,24 @@
 
 
 <div class="entry-content"><ul>
-<li>octopress 存在乱码，编译不过去的现象。有时候主页没有乱码，链接点进去有乱码。这个问题困扰很久。现在总算解决了。
-当然，categories 还没有加上。这个增加就会出现乱码，只能TODO</li>
+<li><a href="http://melandri.net/2012/02/14/octopress-theme-customization/" title="引用">修改主题参考</a></li>
+<li><a href="http://zacharymaril.com/blog/2012/02/24/please-please-octopress/" title="引用">修改主题参考</a></li>
 </ul>
 
 
 <!--more-->
 
 
-<ol>
-<li>自动生成的文件名称用中文，改写title时 用双引号扩住。</li>
-<li>默认主页显示所有内容。编辑时在页面中增加 <code>&lt;!--more--&gt;</code> 这行上下要空开，会只显示 more前面的部分。后面的省略。</li>
-<li><p>在环境变量中增加字符集。如下。安装了git.bash后可以用下面的命令。</p>
-
-<pre><code> $ vim ~/.bash_profile
- export   LC_ALL=zh_CN.UTF-8
- export   LANG=zh_CN.UTF-8
-</code></pre></li>
-<li><p>书写markdwon文件时保存为utf-8 。</p></li>
-<li>为octopress 设置百度云同步。前段时间baidu活动，网盘100g。实在太给力了。
- 现在把md文件和百度网盘同步：</li>
-</ol>
-
+<ul>
+<li><a href="http://blog.pixelingene.com/2011/09/tips-for-speeding-up-octopress-site-generation/" title="tip">加入主题</a>
 
 <blockquote><ul>
-<li>  为win7创建软连接：
-
-<pre><code>命令格式为： mklink source origin ,即在桌面创建一个指向 `c:\Users\song\octopress\
-source\_posts` 的超链接。
-
-  C:\Users\song&gt;mklink /d   C:\Users\song\Desktop\_postse c:\Users\song\octopress\
-    source\_posts
-</code></pre></li>
+<li>rake isolate[filename]: Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker</li>
+<li>rake integrate: Move all stashed posts back into the posts directory, ready for site generation</li>
 </ul>
-</blockquote>
+</blockquote></li>
+</ul>
+
 </div>
 
 
@@ -147,12 +130,12 @@ source\_posts` 的超链接。
   
 
 
-<time datetime="2012-10-16T16:13:00+08:00" pubdate data-updated="true"> 2012年 10月 16日</time>
+<time datetime="2012-10-17T11:06:00+08:00" pubdate data-updated="true"> 2012年 10月 17日</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/note/'>note</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+    <a class='category' href='/blog/categories/note/'>note</a>, <a class='category' href='/blog/categories/tip/'>tip</a>
   
 </span>
 
@@ -161,7 +144,7 @@ source\_posts` 的超链接。
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/" data-via="" data-counturl="http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://songxiaofeng1981.github.com/blog/2012/10/17/octopress-tip/" data-via="" data-counturl="http://songxiaofeng1981.github.com/blog/2012/10/17/octopress-tip/" >Tweet</a>
   
   
   
@@ -170,10 +153,8 @@ source\_posts` 的超链接。
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/11/sublime-snippets/" title="Previous Post: Snippets 自动提示功能">&laquo; Snippets 自动提示功能</a>
+        <a class="basic-alignment left" href="/blog/2012/10/17/rent/" title="Previous Post: 租房记（下）">&laquo; 租房记（下）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/10/16/guchujun/" title="Next Post: 草民完全无罪">草民完全无罪 &raquo;</a>
       
     </p>
   </footer>
@@ -240,8 +221,8 @@ source\_posts` 的超链接。
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/';
-        var disqus_url = 'http://songxiaofeng1981.github.com/blog/2012/10/16/octopress-recipe/';
+        var disqus_identifier = 'http://songxiaofeng1981.github.com/blog/2012/10/17/octopress-tip/';
+        var disqus_url = 'http://songxiaofeng1981.github.com/blog/2012/10/17/octopress-tip/';
         var disqus_script = 'embed.js';
       
     (function () {
