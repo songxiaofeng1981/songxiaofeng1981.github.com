@@ -4,7 +4,7 @@
   <title><![CDATA[西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-10-17T17:43:55+08:00</updated>
+  <updated>2012-10-19T13:49:47+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[gist-upload-image]]></title>
+    <link href="http://songxiaofeng1981.github.com/blog/2012/10/19/gist-upload-image/"/>
+    <updated>2012-10-19T13:11:00+08:00</updated>
+    <id>http://songxiaofeng1981.github.com/blog/2012/10/19/gist-upload-image</id>
+    <content type="html"><![CDATA[<ul>
+<li>云中的汽车</li>
+</ul>
+
+
+<!--more-->
+
+
+<p><img src="https://gist.github.com/raw/3916246/64116d21bcf2d97f8f2242d1678a2e02c620b274/a86c0e87jw1dxyoek1f5aj.png" title="y云中的卡车" ></p>
+
+<ul>
+<li>雪中的列车</li>
+</ul>
+
+
+<p><img src="https://gist.github.com/raw/3916246/b2829f090ac1800c2019e6d42fbc3bee6f119ac8/%D0%A6%D0%B2%D0%B5%D1%82%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B0%D0%BA%D1%83%D1%80%D1%8B%20%D1%83%20%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D0%BE%D0%B8%CC%86%20%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8,%20%D0%AF%D0%BF%D0%BE%D0%BD%D0%B8%D1%8F..jpeg" title="雪中的列车" ></p>
+
+<ul>
+<li>在长岛
+<img src="https://gist.github.com/raw/3916246/8ff72f77d383de96f08dba49692932bf8b89edc6/IMG_0383.jpg" title="长岛集体照" ></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[octopress主题修改]]></title>
