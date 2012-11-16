@@ -4,7 +4,7 @@
   <title><![CDATA[西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-11-16T22:57:36+08:00</updated>
+  <updated>2012-11-16T22:59:12+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -27,8 +27,12 @@ jeffrey@jeffrey-way.au
 jeffrey@jeffrey-way.tv
 </code></pre>
 
-<p>正则匹配表达式： @.+(?=.[a-z]{2,4})
-解释：</p>
+<p>正则匹配表达式： @.+(?=.[a-z]{2,4})</p>
+
+<!--more-->
+
+
+<p>解释：</p>
 
 <ul>
 <li><code>@</code> 匹配@</li>
