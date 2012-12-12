@@ -4,7 +4,7 @@
   <title><![CDATA[西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-11-16T22:59:12+08:00</updated>
+  <updated>2012-12-12T12:53:38+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -12,6 +12,88 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[vim tips]]></title>
+    <link href="http://songxiaofeng1981.github.com/blog/2012/12/12/vim/"/>
+    <updated>2012-12-12T09:54:00+08:00</updated>
+    <id>http://songxiaofeng1981.github.com/blog/2012/12/12/vim</id>
+    <content type="html"><![CDATA[<h2>使用方法：</h2>
+
+<!--more-->
+
+
+<pre><code>1：使用vim -d file1 file2 直接打开两个文件对比
+   或：使用vim file1打开第一个文件，然后使用vert diffsplit file2打开第二个文件进行对比；
+       （vert表示垂直分割窗口，默认为水平分割窗口）
+2：直接对比两个文件的不同：使用diffthis分别在两个窗口输入；
+3：其他技巧：
+    3.1：定位不同点：[c、]c 分别跳到前一个、后一个不同点；
+    3.2：窗口跳转：ctrl-w w 跳到下一个窗口
+            ctrl-w h/l 跳到左侧（右侧）窗口
+            ctrl-w j/k 跳到上方（下方）窗口
+    3.3：文档合并：dp将差异点的当前文档内容合并到另外一个文档（diff put）
+            do 将差异点的另一个文档内容拷贝到当前文档
+    3.4：打开文件折叠：（文本默认将部分内容折叠，扩大视野）
+            zo 临时展开被折叠的相同内容
+            zc 重新折叠
+</code></pre>
+
+<hr />
+
+<ol>
+<li><p>使用vim的比较模式打开两个文件：</p>
+
+<pre><code> vim -d file1 file2
+ 或
+ vimdiff file1 file2
+</code></pre></li>
+<li><p>如果已经打开了文件file1，再打开另一个文件file2进行比较：</p>
+
+<pre><code> :vert diffsplit file2
+ 如果没有用vert命令，diffsplit则会分上下两个窗口。
+</code></pre></li>
+<li><p>如果已经用split方式打开了两个文件file1，file2，又想比较两文件的不同。</p>
+
+<pre><code> 分别在两个窗口里面输入命令：
+ :diffthis
+</code></pre></li>
+<li><p>如果更改了某个窗口的内容，vim又没有自动更新diff检查，可以使用如下命令更新：</p>
+
+<pre><code> :diffupdate
+</code></pre></li>
+<li><p>定位到不同点：</p>
+
+<pre><code>     [c     跳到前一个不同点
+     ]c     跳到后一个不同点
+</code></pre></li>
+<li><p>在窗口间跳转：</p>
+
+<pre><code> ctrl-w w    跳到下一个窗口
+ ctrl-w h    跳到左侧窗口
+ ctrl-w l    跳到右侧窗口
+ ctrl-w j    跳到下方的窗口
+ ctrl-w k    跳到上方的窗口
+</code></pre></li>
+<li><p>合并文档：</p>
+
+<pre><code> dp          将差异点的当前文档内容应用到另一文档（diff put）
+ do          将差异点的另一文档的内容拷贝到当前文档（diff get）
+</code></pre></li>
+<li><p>上下文的展开和查看</p>
+
+<pre><code> 比较和合并文件的时候经常需要结合上下文来确定最终要采取的操作。Vimdiff 缺省是会把不同之处上下各 6 行的文本都显示出来以供参考。其他的相同的文本行被自动折叠。如果希望修改缺省的上下文行数为3行，可以这样设置：
+ :set diffopt=context:3
+ 可以用简单的折叠命令来临时展开被折叠的相同的文本行：
+ zo          (folding open, z这个字母看上去比较像折叠的纸）
+
+ 然后可以用下列命令来重新折叠：
+ zc          (folding close)
+</code></pre></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[RegRex Lookaheads]]></title>
@@ -27,7 +109,7 @@ jeffrey@jeffrey-way.au
 jeffrey@jeffrey-way.tv
 </code></pre>
 
-<p>正则匹配表达式： @.+(?=.[a-z]{2,4})</p>
+<p>正则匹配表达式： <span class="fluo">@.+(?=.[a-z]{2,4})  </span></p>
 
 <!--more-->
 
@@ -37,7 +119,7 @@ jeffrey@jeffrey-way.tv
 <ul>
 <li><code>@</code> 匹配@</li>
 <li><code>.</code> 匹配任意字符</li>
-<li>.[a-z]{2,4} <code>\.</code>匹配一个 <code>.</code>  , <code>[a-z]</code> 匹配所有小写字母 <code>{2,4}</code> 匹配小写字母2-4次。</li>
+<li><code>\.[a-z]{2,4}</code>  <code>\.</code>匹配一个 <code>.</code>  , <code>[a-z]</code> 匹配所有小写字母 <code>{2,4}</code> 匹配小写字母2-4次。</li>
 <li>(?=)匹配但不包含上面的匹配结果</li>
 </ul>
 
