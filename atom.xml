@@ -4,7 +4,7 @@
   <title><![CDATA[西去无狗的网络日志]]></title>
   <link href="http://songxiaofeng1981.github.com/atom.xml" rel="self"/>
   <link href="http://songxiaofeng1981.github.com/"/>
-  <updated>2012-12-12T13:07:30+08:00</updated>
+  <updated>2013-07-30T15:51:19+08:00</updated>
   <id>http://songxiaofeng1981.github.com/</id>
   <author>
     <name><![CDATA[xiaofeng.song]]></name>
@@ -14,11 +14,69 @@
 
   
   <entry>
+    <title type="html"><![CDATA[centos 安装python]]></title>
+    <link href="http://songxiaofeng1981.github.com/blog/2013/07/30/test/"/>
+    <updated>2013-07-30T15:20:00+08:00</updated>
+    <id>http://songxiaofeng1981.github.com/blog/2013/07/30/test</id>
+    <content type="html"><![CDATA[<!--more-->
+
+
+<blockquote><p>Centos6.4默认的python环境是2.6.6。我们可以自己安装Python 2.7.3。但是值得注意的是，<code>我们必须不能破坏系统的环境</code>。
+因为几个关键的实用应用程序依赖于Python2.6.6。如果替换了系统的python环境就会发生很多难以预见的错误，导致要重装系统。
+在没有破坏系统的python环境的情况下安装Python 2.7.3。执行以下命令，请使 用root的身份登录或者使用sudo命令
+安装开发工具
+为了编辑Python，你必须要先安装开发工具盒一些额外的库。这些额外的库并不严格的需要，但是如果不安装，新版本的python编译器可能没法工作。所以建议 先安装。</p></blockquote>
+
+<pre><code># yum groupinstall "Development tools"
+# yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
+</code></pre>
+
+<p>下载和安装Python
+下面有个一个非常重要的步骤是我们使用的是make altinstall。如果使用make install，你将会看到在系统中有两个不同版本的Python在/usr/bin/目录中。这将会导致很多问题，而且不好处理。</p>
+
+<pre><code># wget http://python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2
+# tar xf Python-2.7.3.tar.bz2
+# cd Python-2.7.3
+# ./configure --prefix=/usr/local
+# make &amp;&amp; make altinstall
+运行以上命令后，你可以在目录/usr/local/bin/python2.7 看到新编译的环境。系统的环境python 2.6.6是在/usr/bin/python目录 和 /usr/bin/python2.6目录 .
+</code></pre>
+
+<p>下载和安装Distribute
+Distribute提供一个安装python模块的框架。你系统的每一个python解释器都需要它自己的Distribute。你可以自己找到最新版本的Distribute，在这里https://pypi.python.org/pypi/distribute</p>
+
+<pre><code># wget http://pypi.python.org/packages/source/d/distribute/distribute-0.6.35.tar.gz
+# tar xf distribute-0.6.35.tar.gz
+# cd distribute-0.6.35
+# python2.7 setup.py install
+这将产生一个脚本/usr/local/bin/easy_install-2.7 ，你可以使用它来安装python 2.7模块。它将安装的模块放到 /usr/local/lib/python2.7/site-packages/目录中。
+</code></pre>
+
+<p>VirtualEnv构建Python虚拟机工作环境
+virtualenv是Python开发常用的工具之一，它可以帮助开发者建立一个独立的虚拟的环境，开发者可以将自己需要用的pythonpackage装入到这个虚拟环境中，这样就和系统全局的其他package隔离了，不会影响系统的package布局，要使用这些安装在虚拟环境中的模块，只需要activate进行该环境就OK了，不activate的话就不能使用那些在虚拟环境中的模块，就像从没安装过一样。</p>
+
+<pre><code># easy_install-2.7 virtualenv
+# virtualenv-2.7 --distribute someproject
+New python executable in someproject/bin/python2.7
+Also creating executable in someproject/bin/python
+Installing distribute...................done.
+Installing pip................done.
+# source someproject/bin/activate
+(someproject)# python --version
+Python 2.7.3
+(someproject)#
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[vim tips]]></title>
     <link href="http://songxiaofeng1981.github.com/blog/2012/12/12/vim/"/>
     <updated>2012-12-12T09:54:00+08:00</updated>
     <id>http://songxiaofeng1981.github.com/blog/2012/12/12/vim</id>
     <content type="html"><![CDATA[<h2>使用方法：</h2>
+
+<p><a href="http://hi.baidu.com/jasonlyy/item/a784843b03934bcf382ffa51">转载</a></p>
 
 <!--more-->
 
@@ -42,25 +100,25 @@
 <hr />
 
 <ol>
-<li><p>使用vim的比较模式打开两个文件：</p>
+<li><p>使用vim的比较模式打开两个文件</p>
 
-<pre><code> vim -d file1 file2
- 或
- vimdiff file1 file2
+<pre><code>         vim -d file1 file2
+         或
+         vimdiff file1 file2
 </code></pre></li>
 <li><p>如果已经打开了文件file1，再打开另一个文件file2进行比较：</p>
 
-<pre><code> :vert diffsplit file2
- 如果没有用vert命令，diffsplit则会分上下两个窗口。
+<pre><code>     :vert diffsplit file2
+     如果没有用vert命令，diffsplit则会分上下两个窗口。
 </code></pre></li>
 <li><p>如果已经用split方式打开了两个文件file1，file2，又想比较两文件的不同。</p>
 
-<pre><code> 分别在两个窗口里面输入命令：
- :diffthis
+<pre><code>     分别在两个窗口里面输入命令：
+     :diffthis
 </code></pre></li>
 <li><p>如果更改了某个窗口的内容，vim又没有自动更新diff检查，可以使用如下命令更新：</p>
 
-<pre><code> :diffupdate
+<pre><code>     :diffupdate
 </code></pre></li>
 <li><p>定位到不同点：</p>
 
@@ -69,26 +127,26 @@
 </code></pre></li>
 <li><p>在窗口间跳转：</p>
 
-<pre><code> ctrl-w w    跳到下一个窗口
- ctrl-w h    跳到左侧窗口
- ctrl-w l    跳到右侧窗口
- ctrl-w j    跳到下方的窗口
- ctrl-w k    跳到上方的窗口
+<pre><code>     ctrl-w w    跳到下一个窗口
+     ctrl-w h    跳到左侧窗口
+     ctrl-w l    跳到右侧窗口
+     ctrl-w j    跳到下方的窗口
+     ctrl-w k    跳到上方的窗口
 </code></pre></li>
 <li><p>合并文档：</p>
 
-<pre><code> dp          将差异点的当前文档内容应用到另一文档（diff put）
- do          将差异点的另一文档的内容拷贝到当前文档（diff get）
+<pre><code>     dp          将差异点的当前文档内容应用到另一文档（diff put）
+     do          将差异点的另一文档的内容拷贝到当前文档（diff get）
 </code></pre></li>
 <li><p>上下文的展开和查看</p>
 
-<pre><code> 比较和合并文件的时候经常需要结合上下文来确定最终要采取的操作。Vimdiff 缺省是会把不同之处上下各 6 行的文本都显示出来以供参考。其他的相同的文本行被自动折叠。如果希望修改缺省的上下文行数为3行，可以这样设置：
- :set diffopt=context:3
- 可以用简单的折叠命令来临时展开被折叠的相同的文本行：
- zo          (folding open, z这个字母看上去比较像折叠的纸）
+<pre><code>     比较和合并文件的时候经常需要结合上下文来确定最终要采取的操作。Vimdiff 缺省是会把不同之处上下各 6 行的文本都显示出来以供参考。其他的相同的文本行被自动折叠。如果希望修改缺省的上下文行数为3行，可以这样设置：
+     :set diffopt=context:3
+     可以用简单的折叠命令来临时展开被折叠的相同的文本行：
+     zo          (folding open, z这个字母看上去比较像折叠的纸）
 
- 然后可以用下列命令来重新折叠：
- zc          (folding close)
+     然后可以用下列命令来重新折叠：
+     zc          (folding close)
 </code></pre></li>
 </ol>
 
