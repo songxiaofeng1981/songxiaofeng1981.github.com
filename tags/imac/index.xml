@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Imac on 西去无狗</title>
-    <link>dev.fengaili.com/tags/imac/</link>
+    <link>http://dev.fengaili.com/tags/imac/</link>
     <description>Recent content in Imac on 西去无狗</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 11 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="dev.fengaili.com/tags/imac/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://dev.fengaili.com/tags/imac/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>升级老款imac硬盘</title>
-      <link>dev.fengaili.com/dev/replace_my_imac_ssd/</link>
+      <link>http://dev.fengaili.com/dev/replace_my_imac_ssd/</link>
       <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>dev.fengaili.com/dev/replace_my_imac_ssd/</guid>
+      <guid>http://dev.fengaili.com/dev/replace_my_imac_ssd/</guid>
       <description>  2012年末的imac有点过份慢，用软件测了下磁盘性能，大约只有50M/s的写入速度。 由于之前在笔记本上更换ssd获得了很大的性能提升，所以设想把imac的也替换下。
  准备工作： 确认电脑型号。 2012年末 imac late imac内部只有一个sata位置，之前硬盘需要拆掉。 imac之前硬盘有温控装置，换之后风扇会狂转，可以用软件控制。 目前市面上支持sata的ssd硬盘速率大约550M/s  拆机方式在淘宝上打听了下需要400￥ imac内部只有一个sata位置，之前硬盘需要拆掉。 imac之前硬盘有温控装置，换之后风扇会狂转，可以用软件控制。 目前市面上支持sata的ssd硬盘速率大约550M/s  外置硬盘方式。 imac支持usb3，理论速度最大大约640M/s 三星的t5外置ssd硬盘速度可以 550m/s imac支持外置硬盘装系统。  最后，亚马逊评论区，用这款ssd装mac系统的用户不少。 亚马逊的评论有干货
 确定可行，jd下单等待收货安装。 安装系统步骤  How can I install OS X on a new ssd 如何给Mac电脑做备份 mac 国外论坛  </description>

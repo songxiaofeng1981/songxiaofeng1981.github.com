@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dev on 西去无狗</title>
-    <link>dev.fengaili.com/tags/dev/</link>
+    <link>http://dev.fengaili.com/tags/dev/</link>
     <description>Recent content in Dev on 西去无狗</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 08 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="dev.fengaili.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://dev.fengaili.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>为Visual Studio code增加markdown自定义代码提示</title>
-      <link>dev.fengaili.com/dev/visual_studio_code_-snnipet/</link>
+      <link>http://dev.fengaili.com/dev/visual_studio_code_-snnipet/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>dev.fengaili.com/dev/visual_studio_code_-snnipet/</guid>
+      <guid>http://dev.fengaili.com/dev/visual_studio_code_-snnipet/</guid>
       <description>为Visual Studio code增加markdown 自定义代码提示
  文件-&amp;gt;首选项-&amp;gt;用户代码片段 编辑 markdown.json 文件-&amp;gt;首选项-&amp;gt;设置-&amp;gt; 增加 &amp;#34;editor.tabCompletion&amp;#34;: true 参考资料
 代码片段 { &amp;#34;img&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;img&amp;#34;, &amp;#34;body&amp;#34;: [&amp;#34;![${1:Image Title}](${2:Image Source}) ${0}&amp;#34;], &amp;#34;description&amp;#34;: &amp;#34;img&amp;#34; }, &amp;#34;code&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;code&amp;#34;, &amp;#34;body&amp;#34;: [&amp;#34;`${1:Inline Code Snippet}` ${0}&amp;#34;], &amp;#34;description&amp;#34;: &amp;#34;code&amp;#34; }, &amp;#34;hr&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;hr&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;---&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;hr&amp;#34; }, &amp;#34;ol&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;ol&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;1. ${1:First Item}&amp;#34;, &amp;#34;2. ${2:Second Item}&amp;#34;, &amp;#34;3. ${3:Third Item}&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;ol&amp;#34; }, &amp;#34;pre&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;pre&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;```${1:language}&amp;#34;, &amp;#34;${2:Multi-line Code}&amp;#34;, &amp;#34;```&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;pre&amp;#34; }, &amp;#34;strike&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;strike&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;~~${1:Strike Through}~~ ${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;strike&amp;#34; }, &amp;#34;table&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;table&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;| ${1:Column 1} | ${2:Column 2} |&amp;#34;, &amp;#34;| ------------- | ------------- |&amp;#34;, &amp;#34;| ${3:Cell 1-1} | ${4:Cell 1-2} |&amp;#34;, &amp;#34;| ${5:Cell 2-1} | ${6:Cell 2-2} |&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;table&amp;#34; }, &amp;#34;ul&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;ul&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;- ${1:I} &amp;#34;, &amp;#34;- ${2:Love}&amp;#34;, &amp;#34;- ${3:Markdown}&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;ul&amp;#34; }, &amp;#34;bq&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;bq&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;gt; ${1:Put a nice, beautiful}&amp;#34;, &amp;#34;&amp;gt; ${2:quote here.</description>

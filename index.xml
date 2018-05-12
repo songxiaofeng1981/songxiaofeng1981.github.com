@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>西去无狗</title>
-    <link>dev.fengaili.com/</link>
+    <link>http://dev.fengaili.com/</link>
     <description>Recent content on 西去无狗</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 10 Aug 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="dev.fengaili.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://dev.fengaili.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>云台山自助游记</title>
-      <link>dev.fengaili.com/blog/2013-08-10-yuntaishan/</link>
+      <link>http://dev.fengaili.com/blog/2013-08-10-yuntaishan/</link>
       <pubDate>Sat, 10 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>dev.fengaili.com/blog/2013-08-10-yuntaishan/</guid>
+      <guid>http://dev.fengaili.com/blog/2013-08-10-yuntaishan/</guid>
       <description>11年我们去了趟云台山。风景很美，人很多。留下了美好的记忆。
  2011年5月7号到河南焦作云台山。我们是6号到的焦作，晚上住在速八快捷酒店。然后一大早就去长途汽车站做汽车。买票的时候售票员说让去里面服务台。 然后那个服务台的工作人员进去喊了个人 ，在外面做的一个黑车 。在路上聊了聊，知道那人是汽车站的工作人员，周六日拉私活 。虽然是黑车，司机人还不错。说是到了就赶紧找旅馆吧。如果晚上找，山里人坏的很。 看你没地住到时候宰你。到时候你想下来也没车。我们觉得也对。快到的时候 他就把我们拉到一个农家院。那个农家院叫 佳雨 。司机说我给你个底价80。她要多要,你讲讲价。其实我想他们可能都互通着，但是也睁只眼闭只眼了。然后房东大妈领着我们看房 ，还算干净。 要价100 。我还了80 。她很痛快就答应了。下来给钱的时候又反悔 。要多加10块 。无所谓了。
 然后那司机又把我们拉到售票点。门票180 。包括大巴费用。 这里其实要解释一下。为什么要大巴费用呢？ 因为云台山的景点并不都在一处 。目前开发了有三个，彼此距离遥远。而且云台山不高，乐趣不在爬山，而在峡谷瀑布，去了后就知道大巴是必要的。
@@ -28,10 +28,10 @@
     
     <item>
       <title>升级老款imac硬盘</title>
-      <link>dev.fengaili.com/dev/replace_my_imac_ssd/</link>
+      <link>http://dev.fengaili.com/dev/replace_my_imac_ssd/</link>
       <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>dev.fengaili.com/dev/replace_my_imac_ssd/</guid>
+      <guid>http://dev.fengaili.com/dev/replace_my_imac_ssd/</guid>
       <description>  2012年末的imac有点过份慢，用软件测了下磁盘性能，大约只有50M/s的写入速度。 由于之前在笔记本上更换ssd获得了很大的性能提升，所以设想把imac的也替换下。
  准备工作： 确认电脑型号。 2012年末 imac late imac内部只有一个sata位置，之前硬盘需要拆掉。 imac之前硬盘有温控装置，换之后风扇会狂转，可以用软件控制。 目前市面上支持sata的ssd硬盘速率大约550M/s  拆机方式在淘宝上打听了下需要400￥ imac内部只有一个sata位置，之前硬盘需要拆掉。 imac之前硬盘有温控装置，换之后风扇会狂转，可以用软件控制。 目前市面上支持sata的ssd硬盘速率大约550M/s  外置硬盘方式。 imac支持usb3，理论速度最大大约640M/s 三星的t5外置ssd硬盘速度可以 550m/s imac支持外置硬盘装系统。  最后，亚马逊评论区，用这款ssd装mac系统的用户不少。 亚马逊的评论有干货
 确定可行，jd下单等待收货安装。 安装系统步骤  How can I install OS X on a new ssd 如何给Mac电脑做备份 mac 国外论坛  </description>
@@ -39,10 +39,10 @@
     
     <item>
       <title>为Visual Studio code增加markdown自定义代码提示</title>
-      <link>dev.fengaili.com/dev/visual_studio_code_-snnipet/</link>
+      <link>http://dev.fengaili.com/dev/visual_studio_code_-snnipet/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>dev.fengaili.com/dev/visual_studio_code_-snnipet/</guid>
+      <guid>http://dev.fengaili.com/dev/visual_studio_code_-snnipet/</guid>
       <description>为Visual Studio code增加markdown 自定义代码提示
  文件-&amp;gt;首选项-&amp;gt;用户代码片段 编辑 markdown.json 文件-&amp;gt;首选项-&amp;gt;设置-&amp;gt; 增加 &amp;#34;editor.tabCompletion&amp;#34;: true 参考资料
 代码片段 { &amp;#34;img&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;img&amp;#34;, &amp;#34;body&amp;#34;: [&amp;#34;![${1:Image Title}](${2:Image Source}) ${0}&amp;#34;], &amp;#34;description&amp;#34;: &amp;#34;img&amp;#34; }, &amp;#34;code&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;code&amp;#34;, &amp;#34;body&amp;#34;: [&amp;#34;`${1:Inline Code Snippet}` ${0}&amp;#34;], &amp;#34;description&amp;#34;: &amp;#34;code&amp;#34; }, &amp;#34;hr&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;hr&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;---&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;hr&amp;#34; }, &amp;#34;ol&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;ol&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;1. ${1:First Item}&amp;#34;, &amp;#34;2. ${2:Second Item}&amp;#34;, &amp;#34;3. ${3:Third Item}&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;ol&amp;#34; }, &amp;#34;pre&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;pre&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;```${1:language}&amp;#34;, &amp;#34;${2:Multi-line Code}&amp;#34;, &amp;#34;```&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;pre&amp;#34; }, &amp;#34;strike&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;strike&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;~~${1:Strike Through}~~ ${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;strike&amp;#34; }, &amp;#34;table&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;table&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;| ${1:Column 1} | ${2:Column 2} |&amp;#34;, &amp;#34;| ------------- | ------------- |&amp;#34;, &amp;#34;| ${3:Cell 1-1} | ${4:Cell 1-2} |&amp;#34;, &amp;#34;| ${5:Cell 2-1} | ${6:Cell 2-2} |&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;table&amp;#34; }, &amp;#34;ul&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;ul&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;- ${1:I} &amp;#34;, &amp;#34;- ${2:Love}&amp;#34;, &amp;#34;- ${3:Markdown}&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;ul&amp;#34; }, &amp;#34;bq&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;bq&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;gt; ${1:Put a nice, beautiful}&amp;#34;, &amp;#34;&amp;gt; ${2:quote here.</description>
@@ -50,10 +50,10 @@
     
     <item>
       <title>如何提高blog载入速度</title>
-      <link>dev.fengaili.com/dev/blog_performance/</link>
+      <link>http://dev.fengaili.com/dev/blog_performance/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>dev.fengaili.com/dev/blog_performance/</guid>
+      <guid>http://dev.fengaili.com/dev/blog_performance/</guid>
       <description>如何让我们的网站在毫秒内打开是每个web开发者必须考虑的事情。人类的耐心有限。 如果毫秒内不能打开，意味着你的客户白白流失。
  google提供了一个工具，只要输入网址，就可以分析页面存在的问题 首先：打开谷歌在线验证页，输入我的首页URL，点击验证
 http://developers.google.com/speed/pagespeed/insights/  google web tools 验证出好多问题，逐一解决：
@@ -63,10 +63,10 @@ server { gzip on; gzip_http_version 1.1; gzip_vary on; gzip_comp_level 6; gzip_p
     
     <item>
       <title>租房记（下）</title>
-      <link>dev.fengaili.com/posts/work_home_clean_my_house/</link>
+      <link>http://dev.fengaili.com/posts/work_home_clean_my_house/</link>
       <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>dev.fengaili.com/posts/work_home_clean_my_house/</guid>
+      <guid>http://dev.fengaili.com/posts/work_home_clean_my_house/</guid>
       <description>&lt;h1 id=&#34;收拾屋子&#34;&gt;收拾屋子&lt;/h1&gt;
 
 &lt;p&gt;周六收拾屋子，我说累躺着看电视，老婆收拾了一会就发火了。咆哮又动手。把我掐的疼的要命。然后自个躺着玩游戏 。收金币。这个破烂“冰河世纪” 。有收不完的金币。&lt;/p&gt;
