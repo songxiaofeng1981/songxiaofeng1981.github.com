@@ -2,48 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 西去无狗</title>
-    <link>/tags/</link>
+    <link>dev.fengaili.com/tags/</link>
     <description>Recent content in Tags on 西去无狗</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 08 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Aug 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="dev.fengaili.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog</title>
-      <link>/tags/blog/</link>
-      <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
+      <link>dev.fengaili.com/tags/blog/</link>
+      <pubDate>Sat, 10 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Buy</title>
-      <link>/tags/buy/</link>
-      <pubDate>Sat, 12 May 2018 08:47:10 +0800</pubDate>
-      
-      <guid>/tags/buy/</guid>
+      <guid>dev.fengaili.com/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dev</title>
-      <link>/tags/dev/</link>
+      <link>dev.fengaili.com/tags/dev/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/dev/</guid>
+      <guid>dev.fengaili.com/tags/dev/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Imac</title>
-      <link>/tags/imac/</link>
+      <link>dev.fengaili.com/tags/imac/</link>
       <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/imac/</guid>
+      <guid>dev.fengaili.com/tags/imac/</guid>
       <description></description>
     </item>
     
