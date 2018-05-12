@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>如何提高blog载入速度 &#8211; 西去无狗</title>
+<meta name="description" content="介绍一种快速优化网站打开速度的方法">
+
+    
+
+<meta name="keywords" content="blog">
+
+
+
+<meta name="twitter:title" content="如何提高blog载入速度">
+<meta name="twitter:description" content="介绍一种快速优化网站打开速度的方法">
+
+
+    
+    
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="/images/abstract-11.jpg">
+    
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何提高blog载入速度">
+<meta property="og:description" content="介绍一种快速优化网站打开速度的方法">
+<meta property="og:url" content="/dev/blog_performance/">
+<meta property="og:site_name" content="西去无狗">
+
+
+    
+    <meta property="og:image" content="/images/abstract-11.jpg" />
+
+
+  <meta property="og:updated_time" content="2018-05-08T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+<link rel="canonical" href="/dev/blog_performance/">
+
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<meta name="generator" content="Hugo 0.40.2" />
+
+<script src="/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<link rel="shortcut icon" href="/favicon.png">
+
+
+</head>
+
+<body id="post" class="feature">
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation" style="display:inline-block">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		
+	
+		
+	    <li><a href="/blog/" >生活笔记</a></li>
+	  
+	    <li><a href="/tags/" >tags</a></li>
+	  
+	    <li><a href="/posts/" >posts</a></li>
+	  
+	</ul>
+</nav>
+
+ 
+<div class="entry-header">
+
+	
+    <div class="entry-image">
+      <img src="/images/abstract-11.jpg" alt="如何提高blog载入速度">
+    </div>
+</div>
+  
+
+<div id="main" role="main">
+  <article class="hentry">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        
+          <h1 class="entry-title"><a href="/dev/blog_performance/" rel="bookmark" title="如何提高blog载入速度">如何提高blog载入速度</a></h1>
+        
+         
+        <h2><span class="entry-date date published"><time datetime="2018-05-08 00:00:00 &#43;0000 UTC">May 8, 2018</time></span></h2>
+        
+      <p class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~1 minute
+    </p>
+      </div>
+    </header>
+    <div class="entry-content">
+      
+
+<blockquote>
+<p>如何让我们的网站在毫秒内打开是每个web开发者必须考虑的事情。人类的耐心有限。
+如果毫秒内不能打开，意味着你的客户白白流失。</p>
+</blockquote>
+
+<p>google提供了一个工具，只要输入网址，就可以分析页面存在的问题
+首先：打开谷歌在线验证页，输入我的首页URL，点击验证</p>
+
+<pre><code>http://developers.google.com/speed/pagespeed/insights/
+</code></pre>
+
+<p>google web tools 验证出好多问题，逐一解决：</p>
+
+<h1 id="找出性能瓶颈">找出性能瓶颈</h1>
+
+<p>把不需要每次都加载的资源缓存到客户端。
+这个可以直接更改nginx的配置。 增加压缩gzip。减少带宽传输</p>
+
+<pre><code>server {
+gzip  on;
+gzip_http_version 1.1;
+gzip_vary on;
+gzip_comp_level 6;
+gzip_proxied any;
+gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+gzip_buffers 16 8k;
+gzip_disable &quot;MSIE [1-6]\.(?!.*SV1)&quot;;
+</code></pre>
+
+<h2 id="增加缓存时间">增加缓存时间</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">location <span style="color:#f92672">~*</span> <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">.(</span>js<span style="color:#f92672">|</span>css<span style="color:#f92672">|</span>png<span style="color:#f92672">|</span>jpg<span style="color:#f92672">|</span>jpeg<span style="color:#f92672">|</span>gif<span style="color:#f92672">|</span>ico<span style="color:#f92672">)</span>$ <span style="color:#f92672">{</span>
+        proxy_pass http:<span style="color:#75715e">//172.16.11.154:4000;
+</span><span style="color:#75715e"></span>        proxy_cache_min_uses 1<span style="color:#f92672">;</span>
+        proxy_cache_valid 200 301 302 120m<span style="color:#f92672">;</span>
+        proxy_cache_valid 404 1m<span style="color:#f92672">;</span>
+        expires max<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<h2 id="合并压缩css">合并压缩css</h2>
+
+<p>为了减少http请求次数，需要把多个css 文件和 js文件合并起来，利用yahoo的 <code>YUI Compressor</code>可以把多个ccs文件或者js文件合并成一个单一文件，降低请求次数。</p>
+
+<pre><code>http://refresh-sf.com/yui/
+</code></pre>
+
+<h2 id="最后一步">最后一步</h2>
+
+<p>异步加载css和js ，TODO
+异步加载评论模块（disqus），此模块为国外组织开发，每次打开都耗时极长。
+可以调整为异步加载，当有客户需要评论是，按需打开评论模块。
+但这个很矛盾，如果客户想评论时，这个时候点击评论，打开还是很慢的。
+如果客户看完文章在评论，这个时候评论已经是打开状态，反而体验要好一点。
+这个目前还没有别的方案。暂时先这样吧。</p>
+
+      <footer class="entry-meta">
+          
+        <span class="entry-tags"><a href="/tags/#blog" title="Pages tagged blog" class="tag"><span class="term">blog</span></a></span>
+        
+        
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=%2fdev%2fblog_performance%2f" target="_blank" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=%2fdev%2fblog_performance%2f" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=%2fdev%2fblog_performance%2f" target="_blank" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div>
+
+      </footer>
+    </div>
+    
+    <section id="disqus_thread"><div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'xiquwugou';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    
+  </article>
+</div>
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span> Powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a> using the <a href="https://github.com/dldx/hpstr-hugo-theme" rel="nofollow">HPSTR</a> theme.</span>
+
+  </footer>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="\/js\/vendor\/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/js/scripts.min.js"></script>
+
+
+
+</body>
+</html>
+

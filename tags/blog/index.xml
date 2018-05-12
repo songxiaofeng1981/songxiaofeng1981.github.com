@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on 西去无狗</title>
+    <link>/tags/blog/</link>
+    <description>Recent content in Blog on 西去无狗</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 08 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何提高blog载入速度</title>
+      <link>/dev/blog_performance/</link>
+      <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/dev/blog_performance/</guid>
+      <description>如何让我们的网站在毫秒内打开是每个web开发者必须考虑的事情。人类的耐心有限。 如果毫秒内不能打开，意味着你的客户白白流失。
+ google提供了一个工具，只要输入网址，就可以分析页面存在的问题 首先：打开谷歌在线验证页，输入我的首页URL，点击验证
+http://developers.google.com/speed/pagespeed/insights/  google web tools 验证出好多问题，逐一解决：
+找出性能瓶颈 把不需要每次都加载的资源缓存到客户端。 这个可以直接更改nginx的配置。 增加压缩gzip。减少带宽传输
+server { gzip on; gzip_http_version 1.1; gzip_vary on; gzip_comp_level 6; gzip_proxied any; gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript; gzip_buffers 16 8k; gzip_disable &amp;quot;MSIE [1-6]\.(?!.*SV1)&amp;quot;;  增加缓存时间 location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ { proxy_pass http://172.16.11.154:4000;  proxy_cache_min_uses 1; proxy_cache_valid 200 301 302 120m; proxy_cache_valid 404 1m; expires max; } 合并压缩css 为了减少http请求次数，需要把多个css 文件和 js文件合并起来，利用yahoo的 YUI Compressor可以把多个ccs文件或者js文件合并成一个单一文件，降低请求次数。</description>
+    </item>
+    
+    <item>
+      <title>租房记（下）</title>
+      <link>/posts/work_home_clean_my_house/</link>
+      <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/work_home_clean_my_house/</guid>
+      <description>&lt;h1 id=&#34;收拾屋子&#34;&gt;收拾屋子&lt;/h1&gt;
+
+&lt;p&gt;周六收拾屋子，我说累躺着看电视，老婆收拾了一会就发火了。咆哮又动手。把我掐的疼的要命。然后自个躺着玩游戏 。收金币。这个破烂“冰河世纪” 。有收不完的金币。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
