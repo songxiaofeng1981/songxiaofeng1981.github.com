@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 西去无狗</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 10 Aug 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dev.fengaili.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Blog</title>
       <link>http://dev.fengaili.com/tags/blog/</link>
-      <pubDate>Sat, 10 Aug 2013 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dev.fengaili.com/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Car</title>
+      <link>http://dev.fengaili.com/tags/car/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dev.fengaili.com/tags/car/</guid>
       <description></description>
     </item>
     
