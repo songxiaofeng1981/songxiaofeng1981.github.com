@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://dev.fengaili.com/blog/a_jie_gu/</loc>
+    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dev.fengaili.com/blog/middle_age_man/</loc>
     <lastmod>2018-11-03T00:00:00+00:00</lastmod>
   </url>
@@ -48,14 +53,18 @@
   </url>
   
   <url>
+    <loc>http://dev.fengaili.com/blog/caiyuan/</loc>
+  </url>
+  
+  <url>
     <loc>http://dev.fengaili.com/blog/</loc>
-    <lastmod>2018-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://dev.fengaili.com/tags/blog/</loc>
-    <lastmod>2018-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,6 +98,12 @@
   </url>
   
   <url>
+    <loc>http://dev.fengaili.com/tags/music/</loc>
+    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://dev.fengaili.com/posts/</loc>
     <lastmod>2012-10-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -96,7 +111,7 @@
   
   <url>
     <loc>http://dev.fengaili.com/tags/</loc>
-    <lastmod>2018-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,7 +123,7 @@
   
   <url>
     <loc>http://dev.fengaili.com/</loc>
-    <lastmod>2018-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
