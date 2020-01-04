@@ -1,6 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://dev.fengaili.com/dev/india_worker/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
   
   <url>
     <loc>http://dev.fengaili.com/blog/a_jie_gu/</loc>
@@ -28,13 +33,63 @@
   </url>
   
   <url>
+    <loc>http://dev.fengaili.com/tags/blog/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dev.fengaili.com/dev/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dev.fengaili.com/tags/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dev.fengaili.com/tags/tour/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dev.fengaili.com/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dev.fengaili.com/blog/</loc>
+    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dev.fengaili.com/tags/music/</loc>
+    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dev.fengaili.com/tags/car/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dev.fengaili.com/dev/note_by_myself/</loc>
     <lastmod>2018-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>http://dev.fengaili.com/tags/imac/</loc>
+    <lastmod>2018-05-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dev.fengaili.com/dev/replace_my_imac_ssd/</loc>
     <lastmod>2018-05-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dev.fengaili.com/tags/dev/</loc>
+    <lastmod>2018-05-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -48,83 +103,22 @@
   </url>
   
   <url>
+    <loc>http://dev.fengaili.com/posts/</loc>
+    <lastmod>2012-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dev.fengaili.com/posts/work_home_clean_my_house/</loc>
     <lastmod>2012-10-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://dev.fengaili.com/blog/caiyuan/</loc>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/blog/</loc>
-    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/tags/blog/</loc>
-    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/tags/car/</loc>
-    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://dev.fengaili.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/dev/</loc>
-    <lastmod>2018-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/tags/dev/</loc>
-    <lastmod>2018-05-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/tags/imac/</loc>
-    <lastmod>2018-05-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/tags/music/</loc>
-    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/posts/</loc>
-    <lastmod>2012-10-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/tags/</loc>
-    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/tags/tour/</loc>
-    <lastmod>2018-11-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dev.fengaili.com/</loc>
-    <lastmod>2019-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

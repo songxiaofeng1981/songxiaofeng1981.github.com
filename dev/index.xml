@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dev on 西去无狗</title>
@@ -6,10 +6,21 @@
     <description>Recent content in Dev on 西去无狗</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 26 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dev.fengaili.com/dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>印度精英</title>
+      <link>http://dev.fengaili.com/dev/india_worker/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://dev.fengaili.com/dev/india_worker/</guid>
+      <description>水木上的月经话题之一,美国的印度人为什么这么牛，基本占据了美国的高层岗位。而老中，都是老黄牛的角色，即所谓的印度教中的犬舍，贱民。 前段时间，facebook的浙大工程师跳楼，听说就是被印度老板逼得，我们培养的天之骄子，到了美国，被印度人骑在脖子上拉屎，一点办法都没有。何以至此呢？
+大家分析的原因有以下几点：
+ 印度人很聪明，不聪明不能爬到高位。 最聪明的中国人都在国内。去美帝的都不能算人才。 价值观不同，老中基本都是房子，车子，孩子，对其他公用事务不关心，没兴趣。不适应美国体系。 语言不如印度人好。印度人更能吹牛，更善于表达自己。老中只会干活。 中国政府的优青计划，让美国人不敢把重要岗位给中国人干。提拔上去接触人机密，跑回中国怎么办?印度国内经济差，高层次人才回去也无用武之地。  </description>
+    </item>
     
     <item>
       <title>天津买房前随笔</title>
@@ -26,9 +37,9 @@
       <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dev.fengaili.com/dev/replace_my_imac_ssd/</guid>
-      <description>  2012年末的imac有点过份慢，用软件测了下磁盘性能，大约只有50M/s的写入速度。 由于之前在笔记本上更换ssd获得了很大的性能提升，所以设想把imac的也替换下。
- 准备工作： 确认电脑型号。 2012年末 imac late imac内部只有一个sata位置，之前硬盘需要拆掉。 imac之前硬盘有温控装置，换之后风扇会狂转，可以用软件控制。 目前市面上支持sata的ssd硬盘速率大约550M/s  拆机方式在淘宝上打听了下需要400￥ imac内部只有一个sata位置，之前硬盘需要拆掉。 imac之前硬盘有温控装置，换之后风扇会狂转，可以用软件控制。 目前市面上支持sata的ssd硬盘速率大约550M/s  外置硬盘方式。 imac支持usb3，理论速度最大大约640M/s 三星的t5外置ssd硬盘速度可以 550m/s imac支持外置硬盘装系统。  最后，亚马逊评论区，用这款ssd装mac系统的用户不少。 亚马逊的评论有干货
-确定可行，jd下单等待收货安装。 安装系统步骤  How can I install OS X on a new ssd 如何给Mac电脑做备份 mac 国外论坛  </description>
+      <description> 2012年末的imac有点过份慢，用软件测了下磁盘性能，大约只有50M/s的写入速度。 由于之前在笔记本上更换ssd获得了很大的性能提升，所以设想把imac的也替换下。
+ 准备工作： 确认电脑型号。 2012年末 imac lateimac内部只有一个sata位置，之前硬盘需要拆掉。imac之前硬盘有温控装置，换之后风扇会狂转，可以用软件控制。目前市面上支持sata的ssd硬盘速率大约550M/s 拆机方式在淘宝上打听了下需要400￥ imac内部只有一个sata位置，之前硬盘需要拆掉。imac之前硬盘有温控装置，换之后风扇会狂转，可以用软件控制。目前市面上支持sata的ssd硬盘速率大约550M/s 外置硬盘方式。 imac支持usb3，理论速度最大大约640M/s三星的t5外置ssd硬盘速度可以 550m/simac支持外置硬盘装系统。 最后，亚马逊评论区，用这款ssd装mac系统的用户不少。 亚马逊的评论有干货
+ 确定可行，jd下单等待收货安装。 安装系统步骤  How can I install OS X on a new ssd 如何给Mac电脑做备份 mac 国外论坛  </description>
     </item>
     
     <item>
@@ -38,8 +49,8 @@
       
       <guid>http://dev.fengaili.com/dev/visual_studio_code_-snnipet/</guid>
       <description>为Visual Studio code增加markdown 自定义代码提示
- 文件-&amp;gt;首选项-&amp;gt;用户代码片段 编辑 markdown.json 文件-&amp;gt;首选项-&amp;gt;设置-&amp;gt; 增加 &amp;#34;editor.tabCompletion&amp;#34;: true 参考资料
-代码片段 { &amp;#34;img&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;img&amp;#34;, &amp;#34;body&amp;#34;: [&amp;#34;![${1:Image Title}](${2:Image Source}) ${0}&amp;#34;], &amp;#34;description&amp;#34;: &amp;#34;img&amp;#34; }, &amp;#34;code&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;code&amp;#34;, &amp;#34;body&amp;#34;: [&amp;#34;`${1:Inline Code Snippet}` ${0}&amp;#34;], &amp;#34;description&amp;#34;: &amp;#34;code&amp;#34; }, &amp;#34;hr&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;hr&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;---&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;hr&amp;#34; }, &amp;#34;ol&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;ol&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;1. ${1:First Item}&amp;#34;, &amp;#34;2. ${2:Second Item}&amp;#34;, &amp;#34;3. ${3:Third Item}&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;ol&amp;#34; }, &amp;#34;pre&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;pre&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;```${1:language}&amp;#34;, &amp;#34;${2:Multi-line Code}&amp;#34;, &amp;#34;```&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;pre&amp;#34; }, &amp;#34;strike&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;strike&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;~~${1:Strike Through}~~ ${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;strike&amp;#34; }, &amp;#34;table&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;table&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;| ${1:Column 1} | ${2:Column 2} |&amp;#34;, &amp;#34;| ------------- | ------------- |&amp;#34;, &amp;#34;| ${3:Cell 1-1} | ${4:Cell 1-2} |&amp;#34;, &amp;#34;| ${5:Cell 2-1} | ${6:Cell 2-2} |&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;table&amp;#34; }, &amp;#34;ul&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;ul&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;- ${1:I} &amp;#34;, &amp;#34;- ${2:Love}&amp;#34;, &amp;#34;- ${3:Markdown}&amp;#34;, &amp;#34;${0}&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;ul&amp;#34; }, &amp;#34;bq&amp;#34;:{ &amp;#34;prefix&amp;#34;: &amp;#34;bq&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;gt; ${1:Put a nice, beautiful}&amp;#34;, &amp;#34;&amp;gt; ${2:quote here.</description>
+ 文件-&amp;gt;首选项-&amp;gt;用户代码片段编辑 markdown.json文件-&amp;gt;首选项-&amp;gt;设置-&amp;gt; 增加 &amp;#34;editor.tabCompletion&amp;#34;: true参考资料
+代码片段 {&amp;#34;img&amp;#34;:{&amp;#34;prefix&amp;#34;: &amp;#34;img&amp;#34;,&amp;#34;body&amp;#34;: [&amp;#34;![${1:Image Title}](${2:Image Source}) ${0}&amp;#34;],&amp;#34;description&amp;#34;: &amp;#34;img&amp;#34;},&amp;#34;code&amp;#34;:{&amp;#34;prefix&amp;#34;: &amp;#34;code&amp;#34;,&amp;#34;body&amp;#34;: [&amp;#34;`${1:Inline Code Snippet}` ${0}&amp;#34;],&amp;#34;description&amp;#34;: &amp;#34;code&amp;#34;},&amp;#34;hr&amp;#34;:{&amp;#34;prefix&amp;#34;: &amp;#34;hr&amp;#34;,&amp;#34;body&amp;#34;: [&amp;#34;---&amp;#34;,&amp;#34;${0}&amp;#34;],&amp;#34;description&amp;#34;: &amp;#34;hr&amp;#34;},&amp;#34;ol&amp;#34;:{&amp;#34;prefix&amp;#34;: &amp;#34;ol&amp;#34;,&amp;#34;body&amp;#34;: [&amp;#34;1. ${1:First Item}&amp;#34;,&amp;#34;2. ${2:Second Item}&amp;#34;,&amp;#34;3. ${3:Third Item}&amp;#34;,&amp;#34;${0}&amp;#34;],&amp;#34;description&amp;#34;: &amp;#34;ol&amp;#34;},&amp;#34;pre&amp;#34;:{&amp;#34;prefix&amp;#34;: &amp;#34;pre&amp;#34;,&amp;#34;body&amp;#34;: [&amp;#34;```${1:language}&amp;#34;,&amp;#34;${2:Multi-line Code}&amp;#34;,&amp;#34;```&amp;#34;,&amp;#34;${0}&amp;#34;],&amp;#34;description&amp;#34;: &amp;#34;pre&amp;#34;},&amp;#34;strike&amp;#34;:{&amp;#34;prefix&amp;#34;: &amp;#34;strike&amp;#34;,&amp;#34;body&amp;#34;: [&amp;#34;~~${1:Strike Through}~~ ${0}&amp;#34;],&amp;#34;description&amp;#34;: &amp;#34;strike&amp;#34;},&amp;#34;table&amp;#34;:{&amp;#34;prefix&amp;#34;: &amp;#34;table&amp;#34;,&amp;#34;body&amp;#34;: [&amp;#34;| ${1:Column 1} | ${2:Column 2} |&amp;#34;,&amp;#34;| ------------- | ------------- |&amp;#34;,&amp;#34;| ${3:Cell 1-1} | ${4:Cell 1-2} |&amp;#34;,&amp;#34;| ${5:Cell 2-1} | ${6:Cell 2-2} |&amp;#34;,&amp;#34;${0}&amp;#34;],&amp;#34;description&amp;#34;: &amp;#34;table&amp;#34;},&amp;#34;ul&amp;#34;:{&amp;#34;prefix&amp;#34;: &amp;#34;ul&amp;#34;,&amp;#34;body&amp;#34;: [&amp;#34;- ${1:I} &amp;#34;,&amp;#34;- ${2:Love}&amp;#34;,&amp;#34;- ${3:Markdown}&amp;#34;,&amp;#34;${0}&amp;#34;],&amp;#34;description&amp;#34;: &amp;#34;ul&amp;#34;},&amp;#34;bq&amp;#34;:{&amp;#34;prefix&amp;#34;: &amp;#34;bq&amp;#34;,&amp;#34;body&amp;#34;: [&amp;#34;&amp;gt; ${1:Put a nice, beautiful}&amp;#34;,&amp;#34;&amp;gt; ${2:quote here.</description>
     </item>
     
     <item>
@@ -50,9 +61,9 @@
       <guid>http://dev.fengaili.com/dev/blog_performance/</guid>
       <description>如何让我们的网站在毫秒内打开是每个web开发者必须考虑的事情。人类的耐心有限。 如果毫秒内不能打开，意味着你的客户白白流失。
  google提供了一个工具，只要输入网址，就可以分析页面存在的问题 首先：打开谷歌在线验证页，输入我的首页URL，点击验证
-http://developers.google.com/speed/pagespeed/insights/  google web tools 验证出好多问题，逐一解决：
+http://developers.google.com/speed/pagespeed/insights/ google web tools 验证出好多问题，逐一解决：
 找出性能瓶颈 把不需要每次都加载的资源缓存到客户端。 这个可以直接更改nginx的配置。 增加压缩gzip。减少带宽传输
-server { gzip on; gzip_http_version 1.1; gzip_vary on; gzip_comp_level 6; gzip_proxied any; gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript; gzip_buffers 16 8k; gzip_disable &amp;quot;MSIE [1-6]\.(?!.*SV1)&amp;quot;;  增加缓存时间 location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ { proxy_pass http://172.16.11.154:4000;  proxy_cache_min_uses 1; proxy_cache_valid 200 301 302 120m; proxy_cache_valid 404 1m; expires max; } 合并压缩css 为了减少http请求次数，需要把多个css 文件和 js文件合并起来，利用yahoo的 YUI Compressor可以把多个ccs文件或者js文件合并成一个单一文件，降低请求次数。</description>
+server {gzip on;gzip_http_version 1.1;gzip_vary on;gzip_comp_level 6;gzip_proxied any;gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;gzip_buffers 16 8k;gzip_disable &amp;quot;MSIE [1-6]\.(?!.*SV1)&amp;quot;; 增加缓存时间 location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {proxy_pass http://172.16.11.154:4000; proxy_cache_min_uses 1;proxy_cache_valid 200 301 302 120m;proxy_cache_valid 404 1m;expires max;}合并压缩css 为了减少http请求次数，需要把多个css 文件和 js文件合并起来，利用yahoo的 YUI Compressor可以把多个ccs文件或者js文件合并成一个单一文件，降低请求次数。</description>
     </item>
     
   </channel>
